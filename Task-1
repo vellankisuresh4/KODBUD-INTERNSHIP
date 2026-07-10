@@ -1,0 +1,361 @@
+Task 1: Build a Personal Portfolio Website
+Explanation:
+Create a basic personal website using HTML, CSS, and optionally JavaScript. It should
+include:
+• Your name, picture, and a short bio
+• Sections for education, skills, and projects
+• Contact form (non-functional is okay)
+
+
+Index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suresh | Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+<nav>
+
+<h2>Suresh</h2>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<section id="about" class="hero">
+
+<img src="profile.jpg" alt="Profile">
+
+<h1>Hello, I'm Suresh</h1>
+
+<p>
+Final Year B.Tech Computer Science Engineering Student passionate about
+Web Development, Java Programming, Machine Learning, and Problem Solving.
+I enjoy building responsive websites and learning new technologies.
+</p>
+
+</section>
+
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="card">
+
+<h3>B.Tech - Computer Science Engineering</h3>
+
+<p>XYZ Engineering College</p>
+
+<p>2022 - 2026</p>
+
+<p>CGPA : 8.5</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Java</span>
+<span>Python</span>
+<span>C</span>
+<span>SQL</span>
+<span>Git & GitHub</span>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="project-container">
+
+<div class="project">
+
+<h3>Portfolio Website</h3>
+
+<p>
+Personal responsive portfolio website developed using HTML, CSS,
+and JavaScript.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Flipkart Clone</h3>
+
+<p>
+Designed a Flipkart clone using HTML and CSS with multiple pages.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Fake News Detection</h3>
+
+<p>
+Machine Learning project to classify fake and real news articles.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact Me</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Suresh | All Rights Reserved</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+style.css
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+color:#333;
+line-height:1.6;
+}
+
+header{
+background:#222;
+padding:15px 0;
+position:sticky;
+top:0;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:85%;
+margin:auto;
+}
+
+nav h2{
+color:white;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav ul li a:hover{
+color:orange;
+}
+
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.hero img{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid #222;
+margin-bottom:20px;
+}
+
+.hero h1{
+margin-bottom:15px;
+font-size:35px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+}
+
+section{
+padding:60px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:30px;
+font-size:32px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+text-align:center;
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.skills span{
+background:#222;
+color:white;
+padding:12px 20px;
+border-radius:25px;
+}
+
+.project-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.project{
+background:white;
+padding:20px;
+width:300px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+
+.project h3{
+margin-bottom:10px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+max-width:500px;
+margin:auto;
+}
+
+input,
+textarea{
+padding:12px;
+margin:10px 0;
+border:1px solid gray;
+border-radius:5px;
+}
+
+button{
+padding:12px;
+background:#222;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+button:hover{
+background:orange;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:15px;
+flex-direction:column;
+text-align:center;
+}
+
+nav ul li{
+margin:10px 0;
+}
+
+.project-container{
+flex-direction:column;
+align-items:center;
+}
+}
+
+script.js
+document.querySelectorAll('nav a').forEach(link => {
+
+link.addEventListener('click', function(e){
+
+e.preventDefault();
+
+document.querySelector(this.getAttribute('href')).scrollIntoView({
+
+behavior: 'smooth'
+
+});
+
+});
+
+});
