@@ -1,0 +1,348 @@
+Task 2: Create a Responsive Landing Page
+Explanation:
+Design a homepage for a fictional startup or product. Your page must:
+• Be fully responsive (works on mobile & desktop)
+• Use Flexbox or CSS Grid
+• Contain sections: header, feature highlights, testimonials, and footer
+
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechNova - Smart Solutions</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+TechNova
+</div>
+
+<ul class="nav-links">
+<li><a href="#">Home</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#testimonials">Testimonials</a></li>
+<li><a href="#footer">Contact</a></li>
+</ul>
+
+</nav>
+
+<div class="hero">
+
+<div class="hero-text">
+
+<h1>Build Smarter With TechNova</h1>
+
+<p>
+Helping startups grow with innovative digital solutions,
+beautiful websites, and powerful applications.
+</p>
+
+<a href="#" class="btn">Get Started</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="images/hero.png" alt="Hero Image">
+
+</div>
+
+</div>
+
+</header>
+
+<section id="features">
+
+<h2>Our Features</h2>
+
+<div class="feature-container">
+
+<div class="feature-card">
+
+<h3>Fast Performance</h3>
+
+<p>
+Lightning-fast websites and applications optimized for speed.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<h3>Responsive Design</h3>
+
+<p>
+Looks perfect on desktops, tablets, and smartphones.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<h3>Secure Platform</h3>
+
+<p>
+Modern security standards keep your business safe.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="testimonials">
+
+<h2>What Our Clients Say</h2>
+
+<div class="testimonial-container">
+
+<div class="testimonial">
+
+<p>
+"TechNova transformed our business website. Amazing work!"
+</p>
+
+<h4>- Rahul Sharma</h4>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+"Professional team with excellent support and quality."
+</p>
+
+<h4>- Priya Verma</h4>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+"Our startup grew significantly after launching our new site."
+</p>
+
+<h4>- Arjun Kumar</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="footer">
+
+<p>© 2026 TechNova. All Rights Reserved.</p>
+
+<p>Email: contact@technova.com</p>
+
+</footer>
+
+</body>
+</html>
+
+
+Style.css
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+color:#333;
+}
+
+header{
+background:#1f2937;
+color:white;
+padding:20px 8%;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+}
+
+.nav-links li{
+margin-left:20px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.nav-links a:hover{
+color:#38bdf8;
+}
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:60px 0;
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.hero-text h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:18px;
+margin-bottom:25px;
+line-height:1.7;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#38bdf8;
+color:white;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#0284c7;
+}
+
+.hero-image{
+flex:1;
+text-align:center;
+min-width:300px;
+}
+
+.hero-image img{
+width:90%;
+max-width:450px;
+}
+
+section{
+padding:70px 8%;
+}
+
+section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:36px;
+}
+
+.feature-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.feature-card{
+background:white;
+padding:30px;
+width:300px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 5px 12px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.feature-card:hover{
+transform:translateY(-8px);
+}
+
+.feature-card h3{
+margin-bottom:15px;
+color:#1f2937;
+}
+
+.testimonial-container{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.testimonial{
+background:white;
+padding:25px;
+width:320px;
+border-radius:10px;
+box-shadow:0 5px 12px rgba(0,0,0,.1);
+}
+
+.testimonial p{
+font-style:italic;
+margin-bottom:15px;
+}
+
+footer{
+background:#1f2937;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+}
+
+.nav-links{
+margin-top:20px;
+flex-direction:column;
+text-align:center;
+}
+
+.nav-links li{
+margin:10px 0;
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:36px;
+}
+
+.hero-image{
+margin-top:40px;
+}
+
+}
+
+
+
